@@ -10,7 +10,6 @@ class Backpack
   end
 
   def dress_for_weather
-    # set up local variables used by rest of dress_for_weather method
     weather = @attributes[:weather]
     day_of_week = @attributes[:day_of_week]
 
@@ -28,10 +27,8 @@ class Backpack
       @items << 'shirt'
     end
 
-    # Ensure gym shoes are added to backpack if it's a gym day
-    # Gotta get to the gym on Tuesdays and Thursdays. Wait a sec...
+    # Ensure gym shoes are added to backpack if it's a gym day (monday or thursday)
     if day_of_week == 'monday' || day_of_week == 'thursday'
-      #add gym shoes to items
       @items << 'gym shoes'
     end
 
@@ -39,7 +36,6 @@ class Backpack
     if day_of_week != 'saturday' && day_of_week != 'sunday'
       @items << 'packed lunch'
     elsif false
-      # Used to bring snacks on weekend trips, but now I just buy 'em
       @items << 'snacks'
     end
   end
