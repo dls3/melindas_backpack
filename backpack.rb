@@ -1,6 +1,6 @@
 class Backpack
   def initialize(attributes)
-    @attributes = attributes # a hash containing day_of_week and weather keys
+    @attributes = attributes
     @items = []
     dress_for_weather
     pack_gym_shoes
